@@ -1,0 +1,288 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* Core Styles */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style: none;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* .container {
+     max-width: 1200px;
+     margin: 0 auto;
+} */
+section {
+  padding: 2.5rem 8%;
+}
+
+/* Header section styles */
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 2rem 8.5%;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.header .container .logo {
+  font-size: 3.6rem;
+  color: #000;
+  font-weight: 400;
+}
+
+.header .container .logo span {
+  color: #939393;
+}
+
+.header .container .navbar a {
+  font-size: 2rem;
+  margin-left: 3rem;
+  color: #263238;
+  text-transform: capitalize;
+}
+
+.header .container .navbar a:hover {
+  color: #000;
+}
+
+.header .container .lets-talk .talk-btn {
+  display: inline-block;
+  padding: 1rem 4rem;
+  border: 0.2rem solid #263238;
+  border-radius: .5rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.header .container .lets-talk .talk-btn:hover {
+  background-color: #263238;
+  color: #fff;
+}
+
+.header .container #menu-btn {
+  font-size: 2.5rem;
+  color: #263238;
+  display: none;
+}
+
+/* Home section styles */
+.home {
+  margin-top: 5rem;
+}
+
+.home .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.home .container .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.home .container .content .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2.5rem;
+  gap: 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 2rem 0;
+}
+
+.home .container .content .info .title {
+  font-size: 6.2rem;
+  color: #000;
+  font-weight: 600;
+  line-height: 8rem;
+}
+
+.home .container .content .description {
+  font-size: 2.4rem;
+  color: #8F95A5;
+  font-weight: 400;
+  line-height: 3.6rem;
+  padding: 1rem 0;
+}
+
+.home .container .content .btn {
+  display: inline-block;
+  padding: 1rem 5rem;
+  color: #fff;
+  font-size: 3.4rem;
+  background-color: #263238;
+  border-radius: 1.4rem;
+  font-weight: 400;
+  margin-top: 3rem;
+}
+
+.home .container .content .btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.home .container .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+}
+
+.home .container .image img {
+  width: 100%;
+}
+
+/* Media queries */
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header .container .logo {
+    font-size: 2.5rem;
+  }
+  .header .container .navbar a {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+  }
+  .header .container .lets-talk .talk-btn {
+    padding: .75rem 3.4rem;
+    font-size: 2rem;
+  }
+  .home .container .content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 36rem;
+            flex: 1 1 36rem;
+  }
+  .home .container .content .info .title {
+    font-size: 4.8rem;
+    color: #000;
+    font-weight: 600;
+    line-height: 6.4rem;
+  }
+  .home .container .content .description {
+    font-size: 2rem;
+    color: #8F95A5;
+    font-weight: 400;
+    line-height: 3rem;
+    padding: .75rem 0;
+  }
+  .home .container .content .btn {
+    display: inline-block;
+    padding: 0.75rem 4rem;
+    color: #fff;
+    font-size: 3rem;
+    background-color: #263238;
+    border-radius: 1.1rem;
+    font-weight: 400;
+    margin-top: 2.5rem;
+  }
+  .home .container .image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 38rem;
+            flex: 1 1 38rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .container .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    background-color: #263238;
+  }
+  .header .container .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header .container .navbar a {
+    display: block;
+    padding: 1.5rem 3.5rem;
+    color: #fff;
+  }
+  .header .container .navbar a:hover {
+    color: #939393;
+    text-decoration: underline;
+  }
+  .header .container .lets-talk {
+    display: none;
+  }
+  .header .container #menu-btn {
+    display: inline-block;
+  }
+  .header .container #menu-btn.fa-times {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .home .container {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    gap: 1rem;
+  }
+  .home .container .content .info img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

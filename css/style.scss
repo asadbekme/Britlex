@@ -1,0 +1,331 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Core Styles */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    list-style: none;
+    transition: all .3s linear;
+}
+
+$black: #000;
+$white: #fff;
+$grey: #939393;
+$main-color: #263238;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* .container {
+     max-width: 1200px;
+     margin: 0 auto;
+} */ 
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+@mixin grid($value) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+    gap: 1.5rem;
+}
+
+@mixin title($fontSize1) {
+    font-size: $fontSize1;
+    color: $black;
+    font-weight: 600;
+}
+
+@mixin description($val) {
+    font-size: $val;
+    color: #8F95A5;
+    font-weight: 400;
+}
+
+@mixin btn($padding1, $padding2, $fontSize2, $borderRadius) {
+    display: inline-block;
+    padding: $padding1 $padding2;
+    color: $white;
+    font-size: $fontSize2;
+    background-color: $main-color;
+    border-radius: $borderRadius;
+    font-weight: 400;
+}
+
+section {
+    padding: 2.5rem 8%;
+}
+
+/* Header section styles */
+.header {
+    position: fixed;
+    left: 0; right: 0; top: 0;
+    z-index: 1000;
+    padding: 2rem 8.5%;
+    box-shadow: $box-shadow;
+    background-color: $white;
+
+    .container {
+        @include flex();
+
+        .logo {
+            font-size: 3.6rem;
+            color: $black;
+            font-weight: 400;
+            
+            span {
+                color: $grey;
+            }
+        }
+
+        .navbar {
+
+            a {
+                font-size: 2rem;
+                margin-left: 3rem;
+                color: $main-color;
+                text-transform: capitalize;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+
+        .lets-talk {
+
+            .talk-btn {
+                display: inline-block;
+                padding: 1rem 4rem;
+                border: .2rem solid $main-color;
+                border-radius: .5rem;
+                font-size: 2.4rem;
+                font-weight: 400;
+                text-transform: capitalize;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $main-color;
+                    color: $white;
+                }
+            }
+        }
+
+        #menu-btn {
+            font-size: 2.5rem;
+            color: $main-color;
+            display: none;
+        }
+    }
+}
+
+/* Home section styles */
+.home {
+    margin-top: 5rem;
+
+    .container {
+        @include flex();
+
+        .content {
+            flex: 1 1 40rem;
+
+            .info {
+                @include flex();
+                gap: 0;
+                flex-wrap: nowrap;
+                margin: 2rem 0;
+
+                .title {
+                    @include title(6.2rem);
+                    line-height: 8rem;
+                }
+            }
+
+            .description {
+                @include description(2.4rem);
+                line-height: 3.6rem;
+                padding: 1rem 0;
+            }
+
+            .btn {
+                @include btn(1rem, 5rem, 3.4rem, 1.4rem);
+                margin-top: 3rem;
+
+                &:hover {
+                    background-color: $black;
+                    color: $white;
+                }
+            }
+        }
+
+        .image {
+            flex:  1 1 42rem;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+@media screen and (max-width: 991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+
+        .container {
+    
+            .logo {
+                font-size: 2.5rem;
+            }
+    
+            .navbar {
+    
+                a {
+                    font-size: 1.6rem;
+                    margin-left: 2rem;
+                }
+            }
+    
+            .lets-talk {
+    
+                .talk-btn {
+                    padding: .75rem 3.4rem;
+                    font-size: 2rem;
+                }
+            }    
+        }
+    }
+
+    .home {
+
+        .container {
+
+            .content {
+                flex: 1 1 36rem;
+
+                .info {
+
+                    .title {
+                        @include title(4.8rem);
+                        line-height: 6.4rem;
+                    }
+                }
+
+                .description {
+                    @include description(2rem);
+                    line-height: 3rem;
+                    padding: .75rem 0;
+                }
+
+                .btn {
+                    @include btn(.75rem, 4rem, 3rem, 1.1rem);
+                    margin-top: 2.5rem;
+                }
+            }
+
+            .image {
+                flex: 1 1 38rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .header {
+
+        .container {
+
+            .navbar {
+                position: absolute;
+                top: 99%; left: 0; right: 0;
+                clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+                background-color: $main-color;
+                
+                &.active {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                }
+                a {
+                    display: block;
+                    padding: 1.5rem 3.5rem;
+                    color: $white;
+
+                    &:hover {
+                        color: $grey;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .lets-talk {
+                display: none;
+            }
+
+            #menu-btn {
+                display: inline-block;
+
+                &.fa-times {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .home {
+
+        .container {
+            flex-wrap: wrap-reverse;
+            gap: 1rem;
+
+            .content {
+
+                .info {
+
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    html {
+        font-size: 50%;
+    }
+}
