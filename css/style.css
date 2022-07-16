@@ -21,14 +21,16 @@ html {
   scroll-behavior: smooth;
 }
 
-/* .container {
-     max-width: 1200px;
-     margin: 0 auto;
-} */
-section {
-  padding: 2.5rem 8%;
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
+/*
+section {
+    padding: 2.5rem 8.5%;
+}
+*/
 /* Header section styles */
 .header {
   position: fixed;
@@ -36,7 +38,7 @@ section {
   right: 0;
   top: 0;
   z-index: 1000;
-  padding: 2rem 8.5%;
+  padding: 2rem;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -58,7 +60,7 @@ section {
 .header .container .logo {
   font-size: 3.6rem;
   color: #000;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .header .container .logo span {
@@ -70,10 +72,12 @@ section {
   margin-left: 3rem;
   color: #263238;
   text-transform: capitalize;
+  font-weight: 500;
 }
 
 .header .container .navbar a:hover {
   color: #000;
+  text-decoration: underline;
 }
 
 .header .container .lets-talk .talk-btn {
@@ -100,7 +104,7 @@ section {
 
 /* Home section styles */
 .home {
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 .home .container {
@@ -159,14 +163,13 @@ section {
 
 .home .container .content .btn {
   display: inline-block;
-  padding: 1rem 5rem;
+  padding: 2rem 7rem;
   color: #fff;
-  font-size: 3.4rem;
+  font-size: 2.8rem;
   background-color: #263238;
   border-radius: 1.4rem;
   font-weight: 400;
   margin-top: 3rem;
-  font-weight: 400;
 }
 
 .home .container .content .btn:hover {
@@ -182,6 +185,314 @@ section {
 
 .home .container .image img {
   width: 100%;
+}
+
+/* Skills section styles */
+.skills {
+  margin: 10rem 0;
+}
+
+.skills .container .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (3)[1fr];
+      grid-template-columns: repeat(1fr, 3);
+  gap: 1.5rem;
+}
+
+.skills .container .grid-container .item-1 {
+  background: #F5F5F5;
+  border-radius: 1rem;
+  padding: 2rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
+.skills .container .grid-container .item-1 .image {
+  width: 30rem;
+  height: 30rem;
+}
+
+.skills .container .grid-container .item-1 .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.skills .container .grid-container .item-1 .content .title {
+  font-size: 3rem;
+  color: #000;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.skills .container .grid-container .item-1 .content .description {
+  font-size: 1.5rem;
+  color: #8F95A5;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.skills .container .grid-container .item-1 .content .btn {
+  display: inline-block;
+  padding: 1rem 5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #263238;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.skills .container .grid-container .item-1 .content .btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.skills .container .grid-container .item-2 {
+  background: #F5F5F5;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.skills .container .grid-container .item-2 .image {
+  width: 30rem;
+  height: 30rem;
+}
+
+.skills .container .grid-container .item-2 .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.skills .container .grid-container .item-2 .content .title {
+  font-size: 3rem;
+  color: #000;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.skills .container .grid-container .item-2 .content .description {
+  font-size: 1.5rem;
+  color: #8F95A5;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.skills .container .grid-container .item-2 .content .btn {
+  display: inline-block;
+  padding: 1rem 5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #263238;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.skills .container .grid-container .item-2 .content .btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.skills .container .grid-container .item-3 {
+  background: #F5F5F5;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.skills .container .grid-container .item-3 .image {
+  width: 30rem;
+  height: 30rem;
+}
+
+.skills .container .grid-container .item-3 .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.skills .container .grid-container .item-3 .content .title {
+  font-size: 3rem;
+  color: #000;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.skills .container .grid-container .item-3 .content .description {
+  font-size: 1.5rem;
+  color: #8F95A5;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.skills .container .grid-container .item-3 .content .btn {
+  display: inline-block;
+  padding: 1rem 5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #263238;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.skills .container .grid-container .item-3 .content .btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.skills .container .grid-container .item-4 {
+  background: #F5F5F5;
+  border-radius: 1rem;
+  padding: 2rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.skills .container .grid-container .item-4 .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 30rem;
+  height: 30rem;
+}
+
+.skills .container .grid-container .item-4 .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.skills .container .grid-container .item-4 .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.skills .container .grid-container .item-4 .content .title {
+  font-size: 3rem;
+  color: #000;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.skills .container .grid-container .item-4 .content .description {
+  font-size: 1.5rem;
+  color: #8F95A5;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.skills .container .grid-container .item-4 .content .btn {
+  display: inline-block;
+  padding: 1rem 5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #263238;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.skills .container .grid-container .item-4 .content .btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.about-us {
+  margin: 10rem 0;
+}
+
+.about-us .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about-us .container .content {
+  -webkit-box-flex: 1.15;
+      -ms-flex: 1.15;
+          flex: 1.15;
+}
+
+.about-us .container .content .title {
+  font-size: 4.8rem;
+  color: #000;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 1rem 0;
+}
+
+.about-us .container .content .description {
+  font-size: 1.85rem;
+  color: #8F95A5;
+  font-weight: 400;
+  line-height: 3rem;
+  margin-top: 1.5rem;
+}
+
+.about-us .container .content .numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.about-us .container .content .numbers .number {
+  text-align: center;
+}
+
+.about-us .container .content .numbers .number .title {
+  font-size: 4.5rem;
+  color: #000;
+  font-weight: 600;
+  margin: 0;
+}
+
+.about-us .container .content .numbers .number .description {
+  font-size: 1.85rem;
+  color: #8F95A5;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.about-us .container .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 46rem;
+  width: 46rem;
+}
+
+.about-us .container .image img {
+  width: 100%;
+  height: 100%;
 }
 
 /* Media queries */
@@ -226,7 +537,7 @@ section {
     display: inline-block;
     padding: 0.75rem 4rem;
     color: #fff;
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     background-color: #263238;
     border-radius: 0.5rem;
     font-weight: 400;
@@ -236,6 +547,13 @@ section {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  .skills .container .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(28rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
   }
 }
 
@@ -345,11 +663,44 @@ section {
     display: inline-block;
     padding: 1.2rem 5rem;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-color: #263238;
     border-radius: 0.5rem;
     font-weight: 400;
     margin-top: 2rem;
+  }
+  .skills .container .grid-container .item-1 {
+    background: #F5F5F5;
+    border-radius: 1rem;
+    padding: 2rem;
+    grid-row: auto / auto;
+  }
+  .skills .container .grid-container .item-2 {
+    background: #F5F5F5;
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  .skills .container .grid-container .item-3 {
+    background: #F5F5F5;
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  .skills .container .grid-container .item-4 {
+    background: #F5F5F5;
+    border-radius: 1rem;
+    padding: 2rem;
+    grid-column: auto / auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .about-us .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

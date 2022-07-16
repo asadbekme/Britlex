@@ -19,6 +19,7 @@ $white: #fff;
 $grey: #939393;
 $main-color: #263238;
 $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+$bg-color: #F5F5F5;
 
 html {
     font-size: 62.5%;
@@ -26,10 +27,10 @@ html {
     scroll-behavior: smooth;
 }
 
-/* .container {
-     max-width: 1200px;
+.container {
+     max-width: 1140px;
      margin: 0 auto;
-} */ 
+} 
 
 @mixin flex {
     display: flex;
@@ -66,16 +67,24 @@ html {
     font-weight: 400;
 }
 
-section {
-    padding: 2.5rem 8%;
+@mixin gridItem() {
+    background: $bg-color;
+    border-radius: 1rem;
+    padding: 2rem;
 }
+
+/*
+section {
+    padding: 2.5rem 8.5%;
+}
+*/
 
 /* Header section styles */
 .header {
     position: fixed;
     left: 0; right: 0; top: 0;
     z-index: 1000;
-    padding: 2rem 8.5%;
+    padding: 2rem;
     box-shadow: $box-shadow;
     background-color: $white;
 
@@ -85,7 +94,7 @@ section {
         .logo {
             font-size: 3.6rem;
             color: $black;
-            font-weight: 400;
+            font-weight: 500;
             
             span {
                 color: $grey;
@@ -99,9 +108,11 @@ section {
                 margin-left: 3rem;
                 color: $main-color;
                 text-transform: capitalize;
+                font-weight: 500;
 
                 &:hover {
                     color: $black;
+                    text-decoration: underline;
                 }
             }
         }
@@ -135,7 +146,7 @@ section {
 
 /* Home section styles */
 .home {
-    margin-top: 5rem;
+    margin-top: 7rem;
 
     .container {
         @include flex();
@@ -166,9 +177,8 @@ section {
             }
 
             .btn {
-                @include btn(1rem, 5rem, 3.4rem, 1.4rem);
+                @include btn(2rem, 7rem, 2.8rem, 1.4rem);
                 margin-top: 3rem;
-                font-weight: 400;
 
                 &:hover {
                     background-color: $black;
@@ -182,6 +192,230 @@ section {
 
             img {
                 width: 100%;
+            }
+        }
+    }
+}
+
+/* Skills section styles */
+.skills {
+    margin: 10rem 0;
+
+    .container {
+
+        .grid-container {
+            // @include grid(34rem);
+            display: grid;
+            grid-template-columns: repeat(1fr, 3);
+            gap: 1.5rem;
+            
+            .item-1 {
+                @include gridItem();
+                grid-row: 1 / span 2;
+
+                .image {
+                    width: 30rem;
+                    height: 30rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .content {
+                    
+                    .title {
+                        @include title(3rem);
+                        margin-left: 1rem;
+                    }
+
+                    .description {
+                        @include description(1.5rem);
+                        padding: 1rem;
+                    }
+
+                    .btn {
+                        @include btn(1rem, 5rem, 1.5rem, .5rem);
+                        margin-top: 1rem;
+        
+                        &:hover {
+                            background-color: $black;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            .item-2 {
+                @include gridItem();
+
+                .image {
+                    width: 30rem;
+                    height: 30rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .content {
+                    
+                    .title {
+                        @include title(3rem);
+                        margin-left: 1rem;
+                    }
+
+                    .description {
+                        @include description(1.5rem);
+                        padding: 1rem;
+                    }
+
+                    .btn {
+                        @include btn(1rem, 5rem, 1.5rem, .5rem);
+                        margin-top: 1rem;
+        
+                        &:hover {
+                            background-color: $black;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            .item-3 {
+                @include gridItem();
+
+                .image {
+                    width: 30rem;
+                    height: 30rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .content {
+                    
+                    .title {
+                        @include title(3rem);
+                        margin-left: 1rem;
+                    }
+
+                    .description {
+                        @include description(1.5rem);
+                        padding: 1rem;
+                    }
+
+                    .btn {
+                        @include btn(1rem, 5rem, 1.5rem, .5rem);
+                        margin-top: 1rem;
+        
+                        &:hover {
+                            background-color: $black;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            .item-4 {
+                @include gridItem();
+                grid-column: 2 / span 2;
+                @include flex();
+                
+
+                .image {
+                    flex: 1;
+                    width: 30rem;
+                    height: 30rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .content {
+                    flex: 1;
+                    
+                    .title {
+                        @include title(3rem);
+                        margin-left: 1rem;
+                    }
+
+                    .description {
+                        @include description(1.5rem);
+                        padding: 1rem;
+                    }
+
+                    .btn {
+                        @include btn(1rem, 5rem, 1.5rem, .5rem);
+                        margin-top: 1rem;
+        
+                        &:hover {
+                            background-color: $black;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-us {
+    margin: 10rem 0;
+
+    .container {
+        @include flex();
+        flex-wrap: wrap;
+
+        .content {
+            flex: 1.15;
+
+            .title {
+                @include title(4.8rem);
+                text-transform: capitalize;
+                margin: 1rem 0;
+            }
+
+            .description {
+                @include description(1.85rem);
+                line-height: 3rem;
+                margin-top: 1.5rem;
+            }
+
+            .numbers {
+                @include flex();
+                margin-top: 2rem;
+
+                .number {
+                    text-align: center;
+
+                    .title {
+                        @include title(4.5rem);
+                        margin: 0;
+                    }
+
+                    .description {
+                        @include description(1.85rem);
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        .image {
+            flex: 1;
+            height: 46rem;
+            width: 46rem;
+
+            img {
+                width: 100%;
+                height: 100%;
             }
         }
     }
@@ -260,13 +494,23 @@ section {
                 }
 
                 .btn {
-                    @include btn(.75rem, 4rem, 2.4rem, .5rem);
+                    @include btn(.75rem, 4rem, 2.3rem, .5rem);
                     margin-top: 2.5rem;
                 }
             }
 
             .image {
                 flex: 1;
+            }
+        }
+    }
+
+    .skills {
+
+        .container {
+
+            .grid-container {
+                @include grid(28rem);
             }
         }
     }
@@ -387,10 +631,46 @@ section {
                 }
 
                 .btn {
-                    @include btn(1.2rem, 5rem, 2rem, .5rem);
+                    @include btn(1.2rem, 5rem, 1.8rem, .5rem);
                     margin-top: 2rem;
                 }
             }
+        }
+    }
+
+    .skills {
+
+        .container {
+    
+            .grid-container {
+                
+                .item-1 {
+                    @include gridItem();
+                    grid-row: auto / auto;
+                }
+    
+                .item-2 {
+                    @include gridItem();
+                }
+    
+                .item-3 {
+                    @include gridItem();
+                }
+    
+                .item-4 {
+                    @include gridItem();
+                    grid-column: auto / auto;
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+
+    .about-us {
+
+        .container {
+            flex-direction: column-reverse;
+            gap: 0;
         }
     }
 }
