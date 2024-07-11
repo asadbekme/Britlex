@@ -5,10 +5,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom CSS */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+@layer components {
+  .h1-with-icon::before {
+    content: url("./src/assets/light-bulb.svg");
+    position: absolute;
+    top: 32%;
+    left: 79%;
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .h1-with-icon::before {
+      display: inline-block;
+    }
+  }
 }

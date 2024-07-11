@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <header className="py-3 container">
+    <header id="header" className="py-3 container">
       <div className="flex items-center justify-between gap-5">
         <a href="/">
           <img src={Logo} alt="logo" />
@@ -33,7 +33,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <Button variant="white" size="lg" className="hidden lg:inline-block">
+        <Button variant="white" size="md" className="hidden lg:inline-block">
           Let's Talk
         </Button>
 
@@ -65,7 +65,7 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            <Button variant="white" size="lg">
+            <Button variant="white" size="md">
               Let's Talk
             </Button>
           </div>

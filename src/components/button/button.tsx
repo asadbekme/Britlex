@@ -16,16 +16,17 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const baseClasses =
-    "rounded focus:outline-none transition ease-in-out duration-150";
+    "focus:outline-none transition-all ease-in-out delay-100 duration-300";
   const variantClasses = clsx({
-    "bg-black text-white": variant === "black",
+    "bg-black text-white hover:bg-primary": variant === "black",
     "bg-gray-dark text-white": variant === "gray",
-    "bg-white text-black border": variant === "white",
+    "bg-white text-black border hover:bg-primary hover:text-white":
+      variant === "white",
   });
   const sizeClasses = clsx({
-    "px-4 py-1 text-sm": size === "sm",
-    "px-6 py-2 text-md": size === "md",
-    "px-8 py-3 text-lg": size === "lg",
+    "px-8 py-2 text-md rounded": size === "sm",
+    "px-10 py-3 text-lg rounded-md": size === "md",
+    "px-14 py-4 md:px-16 md:py-5 text-xl rounded-xl": size === "lg",
   });
 
   return (
