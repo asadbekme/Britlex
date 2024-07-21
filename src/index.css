@@ -16,7 +16,7 @@ body {
 
 @layer components {
   .h1-with-icon::before {
-    content: url("./src/assets/light-bulb.svg");
+    content: url("/assets/light-bulb.svg");
     position: absolute;
     top: 32%;
     left: 79%;
