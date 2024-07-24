@@ -4,7 +4,7 @@ import SkillCard from "./skill-card";
 
 const Skills = () => {
   return (
-    <section id="skills" className="container py-20">
+    <section id="skills" className="container py-10 lg:py-20">
       <h2 className="text-center text-black font-semibold text-4xl mb-10">
         Skills
       </h2>

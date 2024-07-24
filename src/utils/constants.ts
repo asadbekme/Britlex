@@ -59,4 +59,19 @@ const skillsData = [
   },
 ];
 
-export { navLinks, skillsData };
+const aboutStatsData = [
+  {
+    aboutStatsTitle: 800,
+    aboutStatsDescription: "Pupils",
+  },
+  {
+    aboutStatsTitle: 18,
+    aboutStatsDescription: "Teachers",
+  },
+  {
+    aboutStatsTitle: 6,
+    aboutStatsDescription: "Foreign languages",
+  },
+];
+
+export { navLinks, skillsData, aboutStatsData };
