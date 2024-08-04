@@ -2,6 +2,9 @@ import speakingImg from "@/assets/speaking.svg";
 import writingImg from "@/assets/writing.svg";
 import readingImg from "@/assets/reading.svg";
 import listeningImg from "@/assets/listening.svg";
+import pricingImg1 from "@/assets/pricing-img1.svg";
+import pricingImg2 from "@/assets/pricing-img2.svg";
+import pricingImg3 from "@/assets/pricing-img3.svg";
 
 const navLinks = [
   {
@@ -74,4 +77,28 @@ const aboutStatsData = [
   },
 ];
 
-export { navLinks, skillsData, aboutStatsData };
+const pricingData = [
+  {
+    title: "Self-study online course",
+    description:
+      "Start learning English online in live classes with qualified EC teachers and students from all over the world.",
+    price: "£5.99",
+    img: pricingImg1,
+  },
+  {
+    title: "Live online classes",
+    description:
+      "Interactive group classes with expert teachers. Free 7-day trial",
+    price: "£12.99",
+    img: pricingImg2,
+  },
+  {
+    title: "Personal Tuition",
+    description:
+      "Online one-to-one English tutoring – enjoy our first session for only $1",
+    price: "£20.99",
+    img: pricingImg3,
+  },
+];
+
+export { navLinks, skillsData, aboutStatsData, pricingData };
