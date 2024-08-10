@@ -13,7 +13,7 @@ const PricingCard = ({ title, description, img, price }: PricingCardProps) => {
       </div>
       <h3 className="text-black font-semibold text-xl">{title}</h3>
       <p className="text-secondary text-center sm:text-left">{description}</p>
-      <button className="flex items-center gap-2 bg-gray-dark px-6 py-[10px] rounded-md">
+      <button className="flex items-center gap-2 bg-gray-dark px-6 hover:scale-105 transition-all py-[10px] rounded-md">
         <span className="inline-block text-primary text-xl sm:text-2xl">
           {price}
         </span>
