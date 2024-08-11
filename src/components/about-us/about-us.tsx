@@ -1,4 +1,4 @@
-import aboutUsImg from "@/assets/about-us.svg";
+import { AboutImg } from "@/assets";
 import { aboutStatsData } from "@/utils/constants";
 
 const AboutUs = () => {
@@ -32,7 +32,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="flex-1 flex items-center justify-center">
-          <img src={aboutUsImg} alt="about-us image" />
+          <img src={AboutImg} alt="about-us image" />
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import ContactImg from "@/assets/contact-img.svg";
+import { ContactImg } from "@/assets";
 import Button from "../button/button";
 
 const Contact = () => {

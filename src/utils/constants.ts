@@ -1,10 +1,12 @@
-import speakingImg from "@/assets/speaking.svg";
-import writingImg from "@/assets/writing.svg";
-import readingImg from "@/assets/reading.svg";
-import listeningImg from "@/assets/listening.svg";
-import pricingImg1 from "@/assets/pricing-img1.svg";
-import pricingImg2 from "@/assets/pricing-img2.svg";
-import pricingImg3 from "@/assets/pricing-img3.svg";
+import {
+  SpeakingImg,
+  WritingImg,
+  ReadingImg,
+  ListeningImg,
+  PricingImg1,
+  PricingImg2,
+  PricingImg3,
+} from "@/assets";
 
 const navLinks = [
   {
@@ -36,28 +38,28 @@ const skillsData = [
       "Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only",
     secondaryDescription:
       "Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners.",
-    imgUrl: speakingImg,
+    imgUrl: SpeakingImg,
     btnTitle: "Learn more",
   },
   {
     title: "Writing",
     primaryDescription:
       "One of the most important and extensive areas of natural science, the science that studies substances, also their composition.",
-    imgUrl: writingImg,
+    imgUrl: WritingImg,
     btnTitle: "Learn more",
   },
   {
     title: "Reading",
     primaryDescription:
       "Perception and response actions of the user resulting from the use and/or upcoming use of the product, system or service.",
-    imgUrl: readingImg,
+    imgUrl: ReadingImg,
     btnTitle: "Learn more",
   },
   {
     title: "Listening",
     primaryDescription:
       "Here you can find activities to practice your listening skills. Listening will help you to improve your understanding.",
-    imgUrl: listeningImg,
+    imgUrl: ListeningImg,
     btnTitle: "Learn more",
   },
 ];
@@ -83,22 +85,34 @@ const pricingData = [
     description:
       "Start learning English online in live classes with qualified EC teachers and students from all over the world.",
     price: "£5.99",
-    img: pricingImg1,
+    img: PricingImg1,
   },
   {
     title: "Live online classes",
     description:
       "Interactive group classes with expert teachers. Free 7-day trial",
     price: "£12.99",
-    img: pricingImg2,
+    img: PricingImg2,
   },
   {
     title: "Personal Tuition",
     description:
       "Online one-to-one English tutoring – enjoy our first session for only $1",
     price: "£20.99",
-    img: pricingImg3,
+    img: PricingImg3,
   },
 ];
 
-export { navLinks, skillsData, aboutStatsData, pricingData };
+const footerLinks = [
+  {
+    link: "Terms and Conditions",
+  },
+  {
+    link: "Privacy Policy",
+  },
+  {
+    link: "Cookie Policy",
+  },
+];
+
+export { navLinks, skillsData, aboutStatsData, pricingData, footerLinks };

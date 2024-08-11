@@ -1,4 +1,4 @@
-import HomeImg from "@/assets/home-img.svg";
+import { HomeImg } from "@/assets";
 import Button from "../button/button";
 
 const Home = () => {
