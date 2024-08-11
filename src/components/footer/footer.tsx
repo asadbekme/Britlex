@@ -3,7 +3,7 @@ import { footerLinks } from "@/utils/constants";
 
 const Footer = () => {
   return (
-    <footer className="container py-10 lg:py-20">
+    <footer id="footer" className="container py-10 lg:py-20">
       <div className="flex flex-col md:flex-row gap-5 items-center pt-10 justify-between border-t border-secondary">
         <a href="/">
           <img src={Logo} alt="logo" />
